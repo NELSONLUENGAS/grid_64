@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas: "nav nav nav nav nav" "aside section section section section" "aside section section section section" "footer footer footer footer footer";
+}
+body nav {
+  grid-area: nav;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+body nav figure {
+  width: 60px;
+}
+body nav figure img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body nav div:nth-of-type(2) {
+  width: 100%;
+}
+body nav div:nth-of-type(2) h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+body aside {
+  grid-area: aside;
+  background-color: yellow;
+  padding: 10px;
+}
+body aside ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+}
+body aside ul p {
+  padding-bottom: 8px;
+}
+body section {
+  grid-area: section;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  grid-gap: 20px;
+  padding: 10px;
+}
+body section .card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right top, #1a1519, #40212f, #6c2a3a, #973737, #b84f26);
+}
+body section .card img {
+  width: 100%;
+}
+body section .card button {
+  border-radius: 8px;
+  padding: 5px 10px;
+  width: 100%;
+}
+body section .card:hover {
+  transform: scale(1.02);
+  box-shadow: inset 0px 0px 30px white;
+}
+body footer {
+  grid-area: footer;
+  background-color: #dedede;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}/*# sourceMappingURL=styles.css.map */
